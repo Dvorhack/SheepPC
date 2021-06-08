@@ -1,0 +1,220 @@
+body {
+    background-color: #E3AFBC;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.logo, .caddie {
+    width: 40px;
+    margin-top: 10px;
+    height: 40px;
+}
+
+p {
+    font-family: "Gill Sans", sans-serif;
+    color: white;
+}
+
+li.searchbar {
+    float: left;
+    color: white;
+    text-align: center;
+    width: 20%;
+    padding-top: 15px;
+}
+
+a {
+    display: block;
+    color: #888888;
+    /*text-align: center;*/
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+/* ------------------------------------------------- */
+
+.containertop2 {
+    top: 8%;
+    display: flex;
+    /*position: fixed;*/
+    font-family: "Gill Sans", sans-serif;
+    width: 100%;
+    height: 5%;
+    background-color: #E3AFBC;
+    justify-content: space-around;
+}
+
+.containertop {
+    top: 0;
+    left: 0;
+    display: flex;
+    /*position: fixed;*/
+    font-family: "Gill Sans", sans-serif;
+    width: 100%;
+    height: 8%;
+    background-color: #9A1750;
+    justify-content: space-around;
+}
+
+.item1top {
+    text-align: center;
+    align-self: center;
+    order: 1;
+}
+
+.item2top {
+    align-self: center;
+    text-align: center;
+    order: 2;
+}
+
+.item3top {
+    align-self: center;
+    text-align: center;
+    order: 3;
+}
+
+.item4top {
+    align-self: center;
+    text-align: center;
+    order: 4;
+}
+
+.item5top {
+    align-self: center;
+    text-align: center;
+    order: 5;
+}
+
+.item1top1 {
+    text-align: center;
+    align-self: center;
+    order: 1;
+}
+
+.item2top1 {
+    align-self: center;
+    text-align: center;
+    font-size: 3em;
+    color: #E3E2DF;
+    order: 2;
+}
+
+.item3top1 {
+    align-self: center;
+    text-align: center;
+    order: 3;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+/* --- Paul --- */
+
+/* The Modal (background) */
+
+.popup {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+.popup-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #E3AFBC;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div .side-filtre {
+    background-color: #9A1750;
+    width: 20%;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 10px;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+div .filtre {
+    background-color: #E3AFBC;
+    border-radius: 5px;
+    font-size: 30px;
+    /*width: 60%;*/
+    /*display: inline-block;*/
+}
+
+div .list-items {
+    /*width: 100px;*/
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+div .items {
+    background-color: #9A1750;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,132 @@
+body {
+    background-color: #E3AFBC;
+    font-family: "Gill Sans", sans-serif;
+	height:100%;
+}
+
+.logo,.caddie {
+    width: 40px;
+    margin-top: 10px;
+    height: 40px;
+}
+
+p {
+    font-family: "Gill Sans", sans-serif;
+    color: white;
+}
+
+li.searchbar {
+    float: left;
+    color: white;
+    text-align: center;
+    width: 20%;
+    padding-top: 15px;
+}
+
+a {
+    display: block;
+    color: #888888;
+    /*text-align: center;*/
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+
+/* ------------------------------------------------- */
+
+.containertop2 {
+    top: 8%;
+    display: flex;
+    /*position: fixed;*/
+    font-family: "Gill Sans", sans-serif;
+    width: 100%;
+	height:5%;
+    background-color: #E3AFBC;
+    justify-content: space-around;
+}
+
+.containertop {
+    top: 0;
+	left:0;
+    display: flex;
+    /*position: fixed;*/
+    font-family: "Gill Sans", sans-serif;
+    width: 100%;
+	height:8%;
+    background-color: #9A1750;
+    justify-content: space-around;
+}
+
+.item1top {
+    text-align: center;
+	align-self: center;
+    order: 1;
+
+}
+
+.item2top {
+    align-self: center;
+    text-align: center;
+	
+    order: 2;
+
+}
+
+.item3top {
+    align-self: center;
+
+    text-align: center;
+    order: 3;
+
+}
+.item4top {
+    align-self: center;
+    text-align: center;
+    order: 4;
+
+}
+.item5top {
+    align-self: center;
+
+    text-align: center;
+    order: 5;
+
+}
+
+.item1top1 {
+    text-align: center;
+	align-self: center;
+    order: 1;
+
+}
+
+.item2top1 {
+    align-self: center;
+    text-align: center;
+	font-size:3em;
+	color:#E3E2DF;
+    order: 2;
+
+}
+
+.item3top1 {
+    align-self: center;
+
+    text-align: center;
+    order: 3;
+
+}
+
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+

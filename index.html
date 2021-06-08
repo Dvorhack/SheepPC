@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Bibliogame</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styletruc.css">
+	
+</head>
+
+<body>
+
+	<header>
+		<div class="containertop">
+			<div class="item1top1"><img class="logo" src="logo.png"></div>
+			<div class="item2top1">SHEEP-PC</div>
+			<div class="item3top1"><img class="caddie" src="caddie.png"></div>
+
+		</div>
+	</header>
+	<nav>
+		<div class="containertop2">
+			<div class="item1top" style="color:#9A1750">Configuration</div>
+			<div class="item2top" style="color:#9A1750">Portable</div>
+			<div class="item3top" style="color:#9A1750">PC Fixe</div>
+			<div class="item4top" style="color:#9A1750">Trouve un pc</div>
+			<div class="item5top" style="color:#9A1750">Rechercher</div>
+		</div>
+	</nav>
+	<table>
+		<thead></thead>
+		<tbody>
+			<tr>
+			
+			<td onclick="display()"><img class="proc" src="image/process1.png"alt=""><br>Processeur</td>
+			<td onclick="display()"><img class="proc" src="image/ram.png"alt=""><br>Ram</td>
+			<td onclick="display()"><img class="proc" src="image/screen.png"alt=""><br>Ecran</td>
+			<td onclick="display()"><img class="proc" src="image/key.png"alt=""><br>Clavier</td>
+			<td onclick="display()"><img class="proc" src="image/mouse.png"alt=""><br>Souris</td>
+
+			</tr>
+			
+			<tr onclick="display()"><td><img class="proc" src="image/dd.png"alt=""><br>Disque dur</td>
+			<td onclick="display()"><img class="proc" src="image/os.png"alt=""><br>Processeur</td>
+			<td onclick="display()"><img class="proc" src="image/usbb.png"alt=""><br>Processeur</td>
+			<td onclick="display()"><img class="proc" src="image/gp.png"alt=""><br>Processeur</td>
+			<td onclick="display()"><img class="proc" src="image/plug.png"alt=""><br>Processeur</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+
+
+	
+	<div id="popupBox" class='popup'>
+		<div class="popup-content">
+			<div class="side-filtre">
+				<div class="filtre">Prix</div>
+				<div class="filtre">
+					<input type="range" min="100" max="2000" value="100" class="slider" name="filtrePrix"id="filtrePrix">
+				</div>
+				<div class="filtre">Marque</div>
+				<div class="filtre">intel</div>
+				<div class="filtre">amd</div>
+			</div>
+			<div class="list-items">
+
+			</div>
+			<span class="close">&times;</span>
+		</div>
+	</div>
+	<script src="script.js">
+		
+		
+	</script>
+
+</body>
+
+</html>
