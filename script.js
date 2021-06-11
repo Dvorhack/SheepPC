@@ -21,10 +21,10 @@ let pcs = [{marque:"ASSER",nom:"Respire TC10",type:"fixe",ecran:null,clavier:nul
 				popup.style.display = "none";
 			}
 		}
-		window.onload= function(){
+		/*window.onload= function(){
 			let list = document.getElementsByClassName("list-items")[0];
 			pcs.forEach(e => {
-				let elt = '<div class="items">'+e.system.cpu.nom+'<img src="cpu.jpg" class="icon" /></div>'
+				let elt = '<div class="items">'+e.system.cpu.nom+'frequ: '+e.system.cpu.frequenceMax+'<img src="cpu.jpg" class="icon" /></div>'
 				list.innerHTML += elt;
 			})
 			let array = document.getElementsByClassName("items");
@@ -34,7 +34,99 @@ let pcs = [{marque:"ASSER",nom:"Respire TC10",type:"fixe",ecran:null,clavier:nul
 					popup.style.display = "none";
 				}
 			}
-		}
-function display(){
+		}*/
+function display(message){
+	let filtre = '';
+	switch (message){
+		case 'proc':
+			loadCpu('cpu');
+			filtre += '<div class="filtre">Nb coeurs</div>'
+			filtre += '<div class="filtre">'
+			filtre += '<button type="button" value="2" onclick="filtreNbCore(this)">2</button>'
+			filtre += '<button type="button" value="6" onclick="filtreNbCore(this)">6</button>'
+			filtre += '<button type="button" value="8" onclick="filtreNbCore(this)">8</button>'
+			filtre += '<button type="button" value="10" onclick="filtreNbCore(this)">10</button>'
+			filtre += '</div>'
+			filtre += '<div class="filtre">Frequence minimum</div>'
+			filtre += '<div class="filtre">'
+			filtre += '<button type="button" value="3000" onclick="filtreFreq(this)">3GHz</button>'
+			filtre += '<button type="button" value="4000" onclick="filtreFreq(this)">4GHz</button>'
+			filtre += '<button type="button" value="5000" onclick="filtreFreq(this)">5GHz</button>'
+			filtre += '<button type="button" value="6000" onclick="filtreFreq(this)">6GHz</button>'
+			filtre += '</div>'
+			break;
+		case 'ram':
+			loadCpu('ram');
+			filtre += '<div class="filtre">Quantité de ram</div>'
+			filtre += '<div class="filtre">'
+			filtre += '<button type="button" value="4" onclick="filtreRam(this)">4Go</button>'
+			filtre += '<button type="button" value="8" onclick="filtreRam(this)">8Go</button>'
+			filtre += '<button type="button" value="16" onclick="filtreRam(this)">16Go</button>'
+			filtre += '<button type="button" value="32" onclick="filtreRam(this)">32Go</button>'
+			filtre += '</div>'
+			break;
+		case 'screen':
+			loadCpu('ecran');
+			break;
+		case 'key':
+			break;
+		case 'mouse':
+			break;
+		
+		case 'os':
+			break;
+		case 'usb':
+			break;
+		case 'gpu':
+			loadCpu('cg');
+			filtre += '<div class="filtre">Quantité de ram</div>'
+			filtre += '<div class="filtre">'
+			filtre += '<button type="button" value="4" onclick="filtreRam(this)">4Go</button>'
+			filtre += '<button type="button" value="8" onclick="filtreRam(this)">8Go</button>'
+			filtre += '<button type="button" value="16" onclick="filtreRam(this)">16Go</button>'
+			filtre += '<button type="button" value="32" onclick="filtreRam(this)">32Go</button>'
+			filtre += '</div>'
+			break;
+		case 'power':
+			break;
+		case 'hdd':
+			//loadCpu('hdd');
+			break;
+	}
+	popup.getElementsByClassName('side-filtre')[0].innerHTML = filtre;
     popup.style.display = "block";
+}
+function loadCpu(composant){
+	let list = document.getElementsByClassName("list-items")[0];
+	list.innerHTML = '';
+	pcs.forEach(e => {
+		let elt = '<div class="items">';
+		//elt += '<div class="items">'+e.system.cpu.nom+'frequ: '+e.system.cpu.frequenceMax+'<img src="cpu.jpg" class="icon" /></div>'
+		if(typeof e.system[composant] === 'object'){
+			for (const [key, value] of Object.entries(e.system[composant])) {
+				elt += key + ':' + value + '<br/>';
+			}
+		}else{
+			elt += composant + ': ' + e.system[composant] + '<br/>';
+		}
+		elt += '</div>';
+		list.innerHTML += elt;
+	})
+	let array = document.getElementsByClassName("items");
+
+	for(let i=0; i<array.length; i++){
+		array[i].onclick = function(){
+			popup.style.display = "none";
+		}
+	}
+}
+
+function filtreNbCore(button){
+	alert('Filtre nb cores: ' + button.value);
+}
+function filtreFreq(button){
+	alert('Filtre freq min: ' + button.value);
+}
+function filtreRam(button){
+	alert('Quantité ram: ' + button.value);
 }
